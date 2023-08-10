@@ -7,8 +7,16 @@
 
    <link rel="stylesheet" href="css/style.css">
 
+<! -----------------------------ICON-------------------------------------- >
    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+
+   <! -----------------------------SWIPE-------------------------------------- >
+   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
 </head>
+
+
 <! -----------------------------NAVBAR-------------------------------------- >
 <nav>
     <div class="container nav_container">
@@ -96,7 +104,9 @@
                 </div>
                     <div class="course__info">
                         <h4>Mastering the Fundamentals of Web Markup"</h4>
-                        <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum quis corrupti quam quae itaque? Odit.</p>
+                        <p> 
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum quis corrupti quam quae itaque? Odit.
+                        </p>
                         <a href="courses.html" class="btn btn-primary">Learn More</a>
                     </div>
             </article>
@@ -106,7 +116,9 @@
                 </div>
                     <div class="course__info">
                         <h4>A Beginner's Guide to Stylish Web Design</h4>
-                        <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum quis corrupti quam quae itaque? Odit.</p>
+                        <p> 
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum quis corrupti quam quae itaque? Odit.
+                        </p>
                         <a href="courses.html" class="btn btn-primary">Learn More</a>
                     </div>
             </article>
@@ -116,7 +128,9 @@
                 </div>
                     <div class="course__info">
                         <h4>A Beginner's Guide to Web Interactivity</h4>
-                        <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum quis corrupti quam quae itaque? Odit.</p>
+                        <p> 
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum quis corrupti quam quae itaque? Odit.
+                        </p>
                         <a href="courses.html" class="btn btn-primary">Learn More</a>
                     </div>
             </article>
@@ -214,10 +228,10 @@
 
     <! -----------------------------THIS IS THE TESTIMONIALS-------------------------------------- >
 
-    <section class="container testimonials__container">
+    <section class="container testimonials__container mySwiper">
         <h2> Student Testimonials</h2>
-        <div>
-            <article class="testimonial">
+        <div class="swiper-wrapper">
+            <article class="testimonial swiper-slide">
                 <div class="avatar">
                     <img src="./images/avatar1.jpeg" alt="profile">
                 </div>
@@ -232,7 +246,7 @@
                 </div>
             </article>
 
-            <article class="testimonial">
+            <article class="testimonial swiper-slide">
                 <div class="avatar">
                     <img src="./images/avatar2.jpeg" alt="profile">
                 </div>
@@ -247,7 +261,7 @@
                 </div>
             </article>
 
-            <article class="testimonial">
+            <article class="testimonial swiper-slide">
                 <div class="avatar">
                     <img src="./images/avatar3.jpeg" alt="profile">
                 </div>
@@ -262,7 +276,7 @@
                 </div>
             </article>
 
-            <article class="testimonial">
+            <article class="testimonial swiper-slide">
                 <div class="avatar">
                     <img src="./images/avatar4.jpg" alt="profile">
                 </div>
@@ -277,7 +291,7 @@
                 </div>
             </article>
 
-            <article class="testimonial">
+            <article class="testimonial swiper-slide">
                 <div class="avatar">
                     <img src="./images/avatar5.jpeg" alt="profile">
                 </div>
@@ -293,9 +307,80 @@
             </article>
 
         </div>
+        <div class="swiper-pagination"></div>
     </section>
 
 
+    <! -----------------------------THIS IS THE FOOTER-------------------------------------- >
+
+    <footer>
+        <div class="container footer__container">
+            <div class="footer__1">
+                <a href="index.html" class="footer__logo"><h4>ZAMAE</h4></a>
+                <P>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt explicabo voluptatibus tempora quis nisi illum unde, molestias facilis necessitatibus dolores?
+                </P>
+            </div>
+
+            <div class="footer__2">
+                <h4>Permalinks</h4>
+                <ul class="permalinks">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="courses.html">COURSES</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__3">
+                <h4>Privacy</h4>
+                <ul class="privacy">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms and Conditions</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__4">
+                <h4>Contact Us</h4>
+                <div>
+                    <p>09235678901</p>
+                    <p>laliza@gmail.com</p>
+                </div>
+                <ul class="footer__socials">
+                    <li><a href="#"><i class="ui uil-facebook"></i></a></li>
+                    <li><a href="#"><i class="ui uil-github"></i></a></li>
+                    <li><a href="#"><i class="ui uil-instagram"></i></a></li>
+                    <li><a href="#"><i class="ui uil-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            <small>Copyrigth &copy;ZAMAE</small>
+        </div>
+    </footer>
+
+
+
+
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./main.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+            breakpoints:{
+                600:{
+                    slidesPerView: 2
+                }
+            }
+        });
+      </script>
 </body>
 </html>
