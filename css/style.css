@@ -133,49 +133,28 @@ nav button{
 /*====================HEADER====================*/
 
 header{
-    position:relative;
+    position: relative;
     top: 5rem;
     overflow: hidden;
-    height: 70vh;
+    height: 80vh;
     margin-bottom: 5rem;
- }
-.header_container{
-    display:grid;
-    gap: 5rem;
+}
+.header__container{
+    display: grid;
     grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 5rem;
     height: 100%;
 }
-.grid-text{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 1rem;
-}
-.grid-text a{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    padding: 0.2rem 0.2rem;
-    border: 1px solid transparent;
-    font-weight: 500;
-    transition: var(--transition);
-}
-
-.grid-picture img{
-    display: flex;
-    left: 60%;
-    height: 99%;
-    width: 100%;
-   
+.header__left p{
+    margin: 0.1rem 0 4rem;
 }
 
 
 /*-----------------CATEGORIES-----------------*/
 .categories{
     background-color: var(--color-bg1);
-    height: 32rem;
+    height: 28rem;
 }
 .categories h1{
     line-height: 1;
@@ -380,7 +359,125 @@ footer ul li a::hover{
 
 /*-----------------MEDIA QUERIES (TABLETS)-----------------*/
 @media screen and (max-width:1024px){
-    body{
-        background: red;
+    
+    h1{
+        font-size: 2.2rem;
     }
+    h2{
+        font-size: 1.7rem;
+    }
+    h3{
+        font-size: 1.4rem;
+    }
+    h4{
+        font-size: 1.2rem;
+    }
+    /*-----------------NAVBAR-----------------*/
+    nav button{
+        display: inline-block;
+        background: transparent;
+        font-size: 1.8rem;
+        color: var(--color-white);
+        cursor: pointer;
+    }
+    nav button#close-menu-btn{
+        display: none;
+    }
+    .nav_menu{
+        position: fixed;
+        top: 5rem;
+        right: 5%;
+       height: fit-content;
+       width: 18rem;
+       flex-direction: column;
+       gap: 0;
+       display: none;
+    }
+    .nav_menu li{
+        width: 100%;
+        height: 5.8rem;
+        animation: animateNavItems 400ms linear forwards;
+        transform-origin: top right;
+        opacity: 0;
+    }
+    .nav_menu li:nth-child(2){
+        animation-delay: 200ms;
+    }
+
+    .nav_menu li:nth-child(3){
+        animation-delay: 400ms;
+    }
+
+    .nav_menu li:nth-child(4){
+        animation-delay: 600ms;
+    }
+
+    @keyframes animateNavItems{
+        0%{
+            transform: rotateZ(-90deg) rotateZ(90deg) scale(0.1);
+        }
+        100%{
+            transform: rotateZ(0) rotate(0) scale(1);
+            opacity: 1;
+        }
+    }
+
+
+    .nav_menu li a{
+        background: var(--color-primary);
+        box-shadow: -4rem 6rem 10rem rgba(0,0,0,0.6);
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-items: center;
+    }
+    .nav_menu li a::hover{
+        background: var(--color-bg2);
+        color: var(--color-white);
+    }
+
+     /*-----------------HEADER-----------------*/
+     header{
+        height: 95vh;
+        margin-bottom: 4rem;
+     }
+     .header__container{
+        gap: 0;
+        padding-bottom: 3rem;
+     }
+     .header__right-image{
+        width: fit-content;
+     }
+     /*-----------------CATEGORIES-----------------*/
+     .categories{
+        height: auto;
+     }
+     .categories__container{
+        grid-template-columns: 1fr;
+        gap: 3rem;
+     }
+     .categories__left{
+        margin-right: 0;
+     }
+
+      /*-----------------COURCES-----------------*/
+     .courses{
+        margin-top: 0;
+     }
+     .courses__container{
+        grid-template-columns: 1fr 1fr;
+     }
+
+      /*-----------------FAQS-----------------*/
+      .faqs__container{
+        grid-template-columns: 1fr;
+      }
+      .faq{
+        padding: 1.5rem;
+      }
+
+       /*-----------------FOOTER-----------------*/
+       .footer__container{
+        grid-template-columns: 1fr 1fr;
+       }
 }
