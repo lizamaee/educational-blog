@@ -175,6 +175,17 @@ nav button{
     margin-top: 2rem;
     font-size: 2rem;
 }
+.achievement__card:nth-child(2) 
+.achievement__icon{
+    background: var(--color-success);
+}
+.achievement__card:nth-child(3) 
+.achievement__icon{
+    background: var(--color-primary);
+}
+.achievement__card p{
+    margin-top: 1rem;
+}
 
 
 
