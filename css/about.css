@@ -133,31 +133,28 @@ nav button{
 
 
 /* ===================ACHIEVEMENT=========================*/
-.about__container{
+.about__achievements{
     margin-top: 6rem;
-    padding-right: 7rem;
+    padding-right: 50rem;
 }
 .about__achievements-container{
     display: grid;
-    grid-template-columns: 57% 60%;
+    grid-template-columns: 100% 40%;
     gap: 5rem;
     border-radius: 5rem;
 }
-.about__achievements-left img{
-    padding-right: 10rem;
-}
 .about__achievements-right{
-    margin: 1.6rem 0 2.5rem;
+    margin: 10rem 0 2.5rem;
 }
 .achievement__card{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns:repeat(3, 1fr);
     gap: 1.5rem;
 }
 .achievements__card{
     margin-top: 4rem;
     background: var(--color-bg2);
-    padding: 1.4rem 1.2rem;
+    padding: 1.7rem 1.2rem;
     text-align: center;
     transition: var(--transition);
 }
@@ -259,6 +256,27 @@ nav button{
     }
     .team__member{
         padding: 1rem;
+    }
+
+}
+
+/*-----------------MEDIA QUERIES(cellphone)-----------------*/
+@media screen and (max-width: 600px) {
+    .achievements__card {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 0.7rem;
+    }
+    .team__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+    .team__member {
+        padding: 0;
+    }
+    .team__member p{
+        margin-bottom: 1.5rem;
     }
 
 }
