@@ -451,7 +451,7 @@ footer ul li a::hover{
         height: auto;
      }
      .categories__container{
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
         gap: 3rem;
      }
      .categories__left{
@@ -463,8 +463,9 @@ footer ul li a::hover{
         margin-top: 0;
      }
      .courses__container{
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
      }
+     
 
       /*-----------------FAQS-----------------*/
       .faqs__container{
@@ -517,7 +518,7 @@ footer ul li a::hover{
       }
         /*-----------------COURSES-----------------*/
         .courses__container{
-            grid-template-columns: 1fr;
+            grid-template-columns:1fr;
         }
           /*-----------------TESTIMONIAL-----------------*/
         .testimonial__body{
