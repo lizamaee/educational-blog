@@ -507,6 +507,7 @@ footer ul li a::hover{
       .categories__right{
         grid-template-columns: 1fr 1fr;
         gap: 0.7rem;
+        margin-left: 1rem;
       }
       .category{
         padding: 1rem;
